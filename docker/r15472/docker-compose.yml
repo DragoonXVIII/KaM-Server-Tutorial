@@ -1,0 +1,11 @@
+services:
+  kam-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: kam_server
+    volumes:
+      - ./KaM Remake Server Settings.ini:/server/KaM Remake Server Settings.ini
+    ports:
+      - "56789:56789"
+    restart: unless-stopped
